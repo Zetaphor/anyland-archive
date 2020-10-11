@@ -237,6 +237,7 @@ function queueSearch(query) {
     };
     request(options, function (error, response) {
       if (error) reject(error);
+      if (typeof response.body === 'undefined') reject('Missing body');
       const results = JSON.parse(response.body);
       if (typeof results.areas === 'undefined') reject('No areas found in response');
       // if (typeof results.areas.length === 'undefined') reject('No areas found in response');
@@ -308,7 +309,12 @@ function startWordListQueue() {
     if (err) console.log('Failed to start wordlist queue:', err);
     wordlist = data.split('\r\n');
     setInterval(function() {
-      const word = wordlist[wordlistIndex];
+      // const word = wordlist[wordlistIndex];
+      
+      const randomIndex = Math.floor(Math.random() * wordlist.length);
+      word = wordlist[randomIndex];
+      wordlist.splice(randomIndex, 1);
+      
       wordlistIndex++;
       console.log('Searching for', word);
       queueSearch(word).then((resp) => {
@@ -316,6 +322,11 @@ function startWordListQueue() {
       });
     }, 5000);    
   });
+}
+
+function startRandomWordlistQueue() {
+
+  randomWordlistWord()  
 }
 
 fs.closeSync(fs.openSync(`failedDownloads-${timestamp}.txt`, 'w')); // Clear/create the failure log

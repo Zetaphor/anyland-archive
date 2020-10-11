@@ -138,8 +138,7 @@ function archiveList(listName) {
     queueList(listName).then((newAreas) => {
       if (newAreas.length) {
         downloadQueue = newAreas.concat(downloadQueue);
-        console.log(newAreas);
-        resolve(`Queued ${newAreas.length} new areas for archival`);
+        resolve(`Queued ${newAreas.length} new areas for download`);
       } else {
         resolve(`No areas in the ${listName} list need archiving`);
       }

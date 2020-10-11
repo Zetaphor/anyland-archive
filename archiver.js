@@ -3,9 +3,9 @@ var fs = require('fs');
 var glob = require("glob");
 
 // popular, popular_rnd, newest, popularNew, popularNew_rnd, lively, favorite, mostFavorited
-const targetList = 'popular_rnd';
-const listQueueDelay = 120 // How long in seconds before checking the random lists to queue more areas
-const downloadDelay = 60; // How long in seconds between getting each area
+const targetList = 'popularNew_rnd';
+const listQueueDelay = 10 // How long in seconds before checking the random lists to queue more areas
+const downloadDelay = 5; // How long in seconds between getting each area
 
 const headers = {
   'Content-Type': 'application/x-www-form-urlencoded',
@@ -13,7 +13,7 @@ const headers = {
   'Accept': '*/*',
   'Accept-Encoding': 'identity',
   'X-Unity-Version': '2018.1.0f2',
-  'Cookie': 's=s%3APwn3LpP0PQ6O65pYThSsCebSHO5KS9GK.ikCfG6PWLeg72N1FMN%2ByTCQjg%2B3BSoB3L1rJyznSUxU' // Change this
+  'Cookie': 's=s%3AHrPKgw_QSNUYPi5xyD1ET27O87M9SYFw.HstAjTcIFVH52%2FutIjCclVFEqRve5cPc%2B1FW5eBNEeM' // Change this
 };
 
 let failedAreas = [];
@@ -138,7 +138,7 @@ function archiveList(listName) {
     queueList(listName).then((newAreas) => {
       if (newAreas.length) {
         downloadQueue = newAreas.concat(downloadQueue);
-        resolve(`Queued ${newAreas.length} new areas for download`);
+        resolve(`Queued ${newAreas.length} new areas for download. Queue contains ${downloadQueue.length} areas`);
       } else {
         resolve(`No areas in the ${listName} list need archiving`);
       }
@@ -184,7 +184,48 @@ function listQueueStep() {
   });  
 }
 
-fs.closeSync(fs.openSync('failedDownloads.txt', 'w')); // Clear/create the failure log
+// Optionally use "BY SOMENAME" and "COPYABLE"
+function queueSearch(query) {
+  return new Promise((resolve, reject) => {
+    const options = {
+      'method': 'POST',
+      'url': 'http://app.anyland.com/area/search',
+      'headers': headers,
+      form: { 'term': query }
+    };
+    request(options, function (error, response) {
+      if (error) reject(error);
+      const results = JSON.parse(response.body);
+      console.log(results.areas);
+      let newAreas = [];
+      for (let i = 0; i < results.areas.length; i++) {
+        const area = results.areas[i];
+        if (isAreaArchived(area.name) || downloadQueue.includes(area.name) || failedAreas.includes(area.name)) continue;
+        newAreas.push(area.name);
+      }
+      downloadQueue = newAreas.concat(downloadQueue);
+      resolve(`Queued ${newAreas.length} new areas for download. Queue contains ${downloadQueue.length} areas`);
+    });
+  });  
+}
+
+function queueSearchAlphabet() {
+  for (i = 0; i < 26; i++) {
+    setTimeout(function() {
+      queueSearch((i+10).toString(36)).then((resp) => {
+        console.log(resp);
+      });
+    }, 2000 * i);
+  }  
+}
+
+// fs.closeSync(fs.openSync('failedDownloads.txt', 'w')); // Clear/create the failure log
 startDownloadQueue();
-listQueueTimer = setInterval(listQueueStep, listQueueDelay * 1000);
-listQueueStep();
+// listQueueTimer = setInterval(listQueueStep, listQueueDelay * 1000);
+// listQueueStep();
+
+// queueSearchAlphabet();
+
+queueSearch('Zeta').then((resp) => {
+  console.log(resp);
+});

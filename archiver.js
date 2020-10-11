@@ -1,6 +1,40 @@
+
+
+const DEBUG = false;
+
 var request = require('request');
 var fs = require('fs');
 var glob = require("glob");
+
+if (DEBUG) {
+  // Reports stack trace for console methods
+  // https://stackoverflow.com/questions/45395369/how-to-get-console-log-line-numbers-shown-in-nodejs#47296370
+  ['log', 'warn', 'error'].forEach((methodName) => {
+    const originalMethod = console[methodName];
+    console[methodName] = (...args) => {
+      let initiator = 'unknown place';
+      try {
+        throw new Error();
+      } catch (e) {
+        if (typeof e.stack === 'string') {
+          let isFirst = true;
+          for (const line of e.stack.split('\n')) {
+            const matches = line.match(/^\s+at\s+(.*)/);
+            if (matches) {
+              if (!isFirst) { // first line - current function
+                              // second line - caller (what we are looking for)
+                initiator = matches[1];
+                break;
+              }
+              isFirst = false;
+            }
+          }
+        }
+      }
+      originalMethod.apply(console, [...args, '\n', `  at ${initiator}`]);
+    };
+  });  
+}
 
 // popular, popular_rnd, newest, popularNew, popularNew_rnd, lively, favorite, mostFavorited
 // visited, created, favorite
@@ -14,7 +48,7 @@ const headers = {
   'Accept': '*/*',
   'Accept-Encoding': 'identity',
   'X-Unity-Version': '2018.1.0f2',
-  'Cookie': 's=s%3AHrPKgw_QSNUYPi5xyD1ET27O87M9SYFw.HstAjTcIFVH52%2FutIjCclVFEqRve5cPc%2B1FW5eBNEeM' // Change this
+  'Cookie': 's=s%3Ak1zWVtvSGwS6x3-shK-xg-cYqenEHt56.hveQ9omg%2FjXAj03vo6MMr2YMUBNsLBPhICWxnZm24aA' // Change this
 };
 
 let failedAreas = [];
@@ -23,6 +57,12 @@ let downloadTimer = null;
 let queueReady = true;
 let listQueueTimer = null
 let listQueueReady = true;
+
+let englishDictionary = {};
+let englishDictionarySize = 0;
+
+let wordlist = [];
+let wordlistIndex = 0;
 
 let timestamp = Date.now();
 
@@ -187,7 +227,6 @@ function listQueueStep() {
   });  
 }
 
-// Optionally use "BY SOMENAME" and "COPYABLE"
 function queueSearch(query) {
   return new Promise((resolve, reject) => {
     const options = {
@@ -199,7 +238,9 @@ function queueSearch(query) {
     request(options, function (error, response) {
       if (error) reject(error);
       const results = JSON.parse(response.body);
-      console.log(results.areas);
+      if (typeof results.areas === 'undefined') reject('No areas found in response');
+      // if (typeof results.areas.length === 'undefined') reject('No areas found in response');
+      // console.log(typeof results.areas === 'undefined');
       let newAreas = [];
       for (let i = 0; i < results.areas.length; i++) {
         const area = results.areas[i];
@@ -207,7 +248,8 @@ function queueSearch(query) {
         newAreas.push(area.name);
       }
       downloadQueue = newAreas.concat(downloadQueue);
-      resolve(`Queued ${newAreas.length} new areas for download. Queue contains ${downloadQueue.length} areas`);
+      if (newAreas.length) resolve(`Queued ${newAreas.length} new areas for download. Queue contains ${downloadQueue.length} areas`);
+      else resolve();
     });
   });  
 }
@@ -236,10 +278,56 @@ function queueWebsiteAreaString() {
   });
 }
 
+function randomDictionaryWord() {
+  return englishDictionary[Math.floor(Math.random() * englishDictionarySize)];
+}
+
+function startRandomSearchQueue() {
+  request('https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json', function (error, response, body) {
+    if (error || response.statusCode !== 200) {
+      console.log('Failed to populate dictionary:', error);
+      return;
+    }
+
+    englishDictionary = Object.keys(JSON.parse(body));
+    englishDictionarySize = englishDictionary.length;
+    console.log('Dictionary size:', englishDictionarySize);
+    console.log('Starting random search queue');
+    setInterval(function() {
+      const word = randomDictionaryWord();
+      console.log('Searching for', word);
+      queueSearch(word).then((resp) => {
+        if (typeof resp !== 'undefined') console.log(resp);
+      });
+    }, 5000);
+  });
+}
+
+function startWordListQueue() {
+  fs.readFile('wordlist.txt', 'utf8', function(err, data) {
+    if (err) console.log('Failed to start wordlist queue:', err);
+    wordlist = data.split('\r\n');
+    setInterval(function() {
+      const word = wordlist[wordlistIndex];
+      wordlistIndex++;
+      console.log('Searching for', word);
+      queueSearch(word).then((resp) => {
+        if (typeof resp !== 'undefined') console.log(resp);
+      });
+    }, 5000);    
+  });
+}
+
 fs.closeSync(fs.openSync(`failedDownloads-${timestamp}.txt`, 'w')); // Clear/create the failure log
 startDownloadQueue();
-listQueueTimer = setInterval(listQueueStep, listQueueDelay * 1000);
-listQueueStep();
+
+startWordListQueue();
+
+// startRandomSearchQueue();
+
+// listQueueTimer = setInterval(listQueueStep, listQueueDelay * 1000);
+// listQueueStep();
+
 
 // queueSearchAlphabet();
 

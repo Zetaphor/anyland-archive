@@ -1,0 +1,1 @@
+{"thingDefinitions":[{"id":"5dd9df2b9cf51a4aec96f1bd","def":"{\"v\":9,\"p\":[{\"b\":3,\"s\":[{\"p\":[-0.06974736,0.02648551,-0.06398912],\"r\":[304.9456,25.27157,10.89018],\"s\":[0.3410471,0.3509011,0.003652489],\"c\":[1,1,1],\"b\":[\"when trigger let go then give haptic feedback\",\"when touch ends then become soft start \"]}]}]}"}],"serveTime":4}

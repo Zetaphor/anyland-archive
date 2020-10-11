@@ -1,0 +1,480 @@
+sunbeach
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (sunbeach) - Undefined keys, probably area name
+
+heads n more
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (heads n more) - Undefined keys, probably area name
+
+wizard hut
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (wizard hut) - Undefined keys, probably area name
+
+ziddan's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (ziddan's home) - Undefined keys, probably area name
+
+ice mountain
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (ice mountain) - Undefined keys, probably area name
+
+skull cave
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (skull cave) - Undefined keys, probably area name
+
+art central
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (art central) - Undefined keys, probably area name
+
+music hall
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (music hall) - Undefined keys, probably area name
+
+lokimut's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (lokimut's home) - Undefined keys, probably area name
+
+gooboberti's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (gooboberti's home) - Undefined keys, probably area name
+
+pigsty55's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (pigsty55's home) - Undefined keys, probably area name
+
+axels apartment
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (axels apartment) - Undefined keys, probably area name
+
+nes the legend of zelda
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (nes the legend of zelda) - Undefined keys, probably area name
+
+laxawp firing range
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (laxawp firing range) - Undefined keys, probably area name
+
+cafe 80s
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (cafe 80s) - Undefined keys, probably area name
+
+the marketplace
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the marketplace) - Undefined keys, probably area name
+
+los angeles 2019
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (los angeles 2019) - Undefined keys, probably area name
+
+xmas town
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (xmas town) - Undefined keys, probably area name
+
+amusement park
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (amusement park) - Undefined keys, probably area name
+
+spike apartment
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (spike apartment) - Undefined keys, probably area name
+
+spacestation
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (spacestation) - Undefined keys, probably area name
+
+crunkstaa's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (crunkstaa's home) - Undefined keys, probably area name
+
+jinx mansion entrance
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (jinx mansion entrance) - Undefined keys, probably area name
+
+the apocalypse
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the apocalypse) - Undefined keys, probably area name
+
+shark multiverse
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (shark multiverse) - Undefined keys, probably area name
+
+building rms titanic
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (building rms titanic) - Undefined keys, probably area name
+
+anycinema
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (anycinema) - Undefined keys, probably area name
+
+sandstonesea-apartments
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (sandstonesea-apartments) - Undefined keys, probably area name
+
+spiders home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (spiders home) - Undefined keys, probably area name
+
+the facility
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the facility) - Undefined keys, probably area name
+
+hardcodeds workshop
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (hardcodeds workshop) - Undefined keys, probably area name
+
+pigeon test area
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (pigeon test area) - Undefined keys, probably area name
+
+beady124's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (beady124's home) - Undefined keys, probably area name
+
+sakhados home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (sakhados home) - Undefined keys, probably area name
+
+yyytytyyyyyyyyyyyyyy
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (yyytytyyyyyyyyyyyyyy) - Undefined keys, probably area name
+
+tranquility lane
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (tranquility lane) - Undefined keys, probably area name
+
+zen garden
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (zen garden) - Undefined keys, probably area name
+
+pizza romance rpg mega-quadrant
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (pizza romance rpg mega-quadrant) - Undefined keys, probably area name
+
+trout n hook
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (trout n hook) - Undefined keys, probably area name
+
+triplehelix
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (triplehelix) - Undefined keys, probably area name
+
+seizure warning
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (seizure warning) - Undefined keys, probably area name
+
+the nasty king
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the nasty king) - Undefined keys, probably area name
+
+fruit friends
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (fruit friends) - Undefined keys, probably area name
+
+philosophy
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (philosophy) - Undefined keys, probably area name
+
+pen's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (pen's home) - Undefined keys, probably area name
+
+miles home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (miles home) - Undefined keys, probably area name
+
+pierres miniature stuff
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (pierres miniature stuff) - Undefined keys, probably area name
+
+iconland
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (iconland) - Undefined keys, probably area name
+
+beadys area
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (beadys area) - Undefined keys, probably area name
+
+cube one
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (cube one) - Undefined keys, probably area name
+
+the offices of sam and max
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the offices of sam and max) - Undefined keys, probably area name
+
+danglys work space
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (danglys work space) - Undefined keys, probably area name
+
+tortuga
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (tortuga) - Undefined keys, probably area name
+
+vr club room
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (vr club room) - Undefined keys, probably area name
+
+snowdin
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (snowdin) - Undefined keys, probably area name
+
+exbower2 house
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (exbower2 house) - Undefined keys, probably area name
+
+build a town together
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (build a town together) - Undefined keys, probably area name
+
+frogcloset
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (frogcloset) - Undefined keys, probably area name
+
+lots of random
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (lots of random) - Undefined keys, probably area name
+
+poemy home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (poemy home) - Undefined keys, probably area name
+
+any themepark
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (any themepark) - Undefined keys, probably area name
+
+epicland
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (epicland) - Undefined keys, probably area name
+
+mars tunnels
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (mars tunnels) - Undefined keys, probably area name
+
+watthew's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (watthew's home) - Undefined keys, probably area name
+
+black&light
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (black&light) - Undefined keys, probably area name
+
+aiur - antioch - citadel of the executor
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (aiur - antioch - citadel of the executor) - Undefined keys, probably area name
+
+mtc home 2
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (mtc home 2) - Undefined keys, probably area name
+
+frigren
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (frigren) - Undefined keys, probably area name
+
+land of spesey
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (land of spesey) - Undefined keys, probably area name
+
+skill games
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (skill games) - Undefined keys, probably area name
+
+bill dances apartment
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (bill dances apartment) - Undefined keys, probably area name
+
+zidsguest's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (zidsguest's home) - Undefined keys, probably area name
+
+pain domain
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (pain domain) - Undefined keys, probably area name
+
+vive testroom
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (vive testroom) - Undefined keys, probably area name
+
+a cool area
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (a cool area) - Undefined keys, probably area name
+
+justtest1
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (justtest1) - Undefined keys, probably area name
+
+wild place time
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (wild place time) - Undefined keys, probably area name
+
+goldforest's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (goldforest's home) - Undefined keys, probably area name
+
+justtest2
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (justtest2) - Undefined keys, probably area name
+
+vj franz k art gallery
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (vj franz k art gallery) - Undefined keys, probably area name
+
+some shoddy apartment
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (some shoddy apartment) - Undefined keys, probably area name
+
+randomness landthingy
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (randomness landthingy) - Undefined keys, probably area name
+
+nebulas think space
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (nebulas think space) - Undefined keys, probably area name
+
+spesey sonw
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (spesey sonw) - Undefined keys, probably area name
+
+cgchris's home
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (cgchris's home) - Undefined keys, probably area name
+
+safko lounge
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (safko lounge) - Undefined keys, probably area name
+
+dirts lab
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (dirts lab) - Undefined keys, probably area name
+
+ripgame
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (ripgame) - Undefined keys, probably area name
+
+chatroom
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (chatroom) - Undefined keys, probably area name
+
+buildspace
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (buildspace) - Undefined keys, probably area name
+
+test-delete
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (test-delete) - Undefined keys, probably area name
+
+any ball
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (any ball) - Undefined keys, probably area name
+
+poliganis
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (poliganis) - Undefined keys, probably area name
+
+home------hdhdhdhf
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (home------hdhdhdhf) - Undefined keys, probably area name
+
+sandbox heaven
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (sandbox heaven) - Undefined keys, probably area name
+
+the barracks
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the barracks) - Undefined keys, probably area name
+

@@ -188,3 +188,33 @@ ID: Unobtained
 Key: Unobtained
 Error: Failed to get area identifiers (pizza romance rpg mega-quadrant) - Undefined keys, probably area name
 
+trout n hook
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (trout n hook) - Undefined keys, probably area name
+
+triplehelix
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (triplehelix) - Undefined keys, probably area name
+
+seizure warning
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (seizure warning) - Undefined keys, probably area name
+
+the nasty king
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (the nasty king) - Undefined keys, probably area name
+
+fruit friends
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (fruit friends) - Undefined keys, probably area name
+
+philosophy
+ID: Unobtained
+Key: Unobtained
+Error: Failed to get area identifiers (philosophy) - Undefined keys, probably area name
+

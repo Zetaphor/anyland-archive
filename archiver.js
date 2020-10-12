@@ -1,5 +1,3 @@
-
-
 const DEBUG = false;
 
 var request = require('request');
@@ -40,7 +38,7 @@ if (DEBUG) {
 // visited, created, favorite
 const targetList = 'favorite';
 const listQueueDelay = 10 // How long in seconds before checking the random lists to queue more areas
-const downloadDelay = 5; // How long in seconds between getting each area
+const downloadDelay = 1.5; // How long in seconds between getting each area
 
 const headers = {
   'Content-Type': 'application/x-www-form-urlencoded',
@@ -182,7 +180,7 @@ function archiveList(listName) {
   return new Promise((resolve, reject) => {
     queueList(listName).then((newAreas) => {
       if (newAreas.length) {
-        downloadQueue = newAreas.concat(downloadQueue);
+        downloadQueue = downloadQueue.concat(newAreas);
         resolve(`Queued ${newAreas.length} new areas for download. Queue contains ${downloadQueue.length} areas`);
       } else {
         resolve(`No areas in the ${listName} list need archiving. Queue contains ${downloadQueue.length} areas`);
@@ -250,7 +248,7 @@ function queueSearch(query) {
         if (isAreaArchived(area.name) || downloadQueue.includes(area.name) || failedAreas.includes(area.name)) continue;
         newAreas.push(area.name);
       }
-      downloadQueue = newAreas.concat(downloadQueue);
+      downloadQueue = downloadQueue.concat(newAreas);
       if (newAreas.length) resolve(`Queued ${newAreas.length} new areas for download. Queue contains ${downloadQueue.length} areas`);
       else resolve();
     });
@@ -311,24 +309,21 @@ function startWordListQueue() {
     if (err) console.log('Failed to start wordlist queue:', err);
     wordlist = data.split('\r\n');
     setInterval(function() {
-      // const word = wordlist[wordlistIndex];
-      
-      const randomIndex = Math.floor(Math.random() * wordlist.length);
-      word = wordlist[randomIndex];
-      wordlist.splice(randomIndex, 1);
-      
-      wordlistIndex++;
-      console.log('Searching for', word);
-      queueSearch(word).then((resp) => {
+      if (!wordlist.length) {
+        console.log('Dictionary empty!');
+        return;
+      };
+      // const randomIndex = Math.floor(Math.random() * wordlist.length);
+      // word = wordlist[randomIndex];
+      const word = wordlist[wordlistIndex];      
+      wordlist.splice(wordlistIndex, 1);
+      console.log(`Searching for #${wordlistIndex}: ${word.toLowerCase()}`);
+      wordlistIndex++;      
+      queueSearch(word.toLowerCase()).then((resp) => {
         if (typeof resp !== 'undefined') console.log(resp);
       });
     }, 5000);    
   });
-}
-
-function startRandomWordlistQueue() {
-
-  randomWordlistWord()  
 }
 
 fs.closeSync(fs.openSync(`failedDownloads-${timestamp}.txt`, 'w')); // Clear/create the failure log

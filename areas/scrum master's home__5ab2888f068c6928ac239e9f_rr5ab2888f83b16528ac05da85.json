@@ -1,0 +1,1 @@
+{"thingDefinitions":[{"id":"5ab289ad30be13137eeb2afe","def":"{\"v\":2,\"p\":[{\"b\":103,\"e\":\"HELLO, THIS IS OSNABRUECK SPEAKING\",\"s\":[{\"p\":[0,0,0],\"r\":[0,0,0],\"s\":[0.003000002,0.003000001,0.003],\"c\":[0.3333332,1,0.6],\"b\":[\"when touched then emit [drop from inventory]\"]}]}]}"}],"serveTime":4}

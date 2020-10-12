@@ -1,0 +1,15 @@
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+#debug {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  padding: 10px; 
+  z-index: 100;
+  background: pink;
+  border-radius: 10px;
+}

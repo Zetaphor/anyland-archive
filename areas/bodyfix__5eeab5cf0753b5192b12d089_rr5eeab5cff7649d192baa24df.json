@@ -1,0 +1,1 @@
+{"thingDefinitions":[{"id":"5eeab76cd69060112fa8eede","def":"{\"v\":9,\"a\":[7,18],\"p\":[{\"s\":[{\"p\":[0,0,0],\"r\":[0,0,0],\"s\":[0.175003,0.1750133,0.175014],\"c\":[0.1142855,1,0],\"b\":[\"when starts then reset body\",\"when touches hand then reset body\"]}]}]}"}],"serveTime":8}

@@ -1,0 +1,1 @@
+{"thingDefinitions":[{"id":"5dc7db816508a310d89bdac3","def":"{\"v\":9,\"a\":[2,3],\"inc\":[[\"rusty sword\",\"5db6697d39effe115f71ab01\"]],\"p\":[{\"s\":[{\"p\":[0,0,0],\"r\":[0,0,-5.069281E-07],\"s\":[0.175,0.175,0.175],\"c\":[1,1,1],\"b\":[\"when triggered then emit rusty sword with 100\"]}]}]}"}],"serveTime":5}

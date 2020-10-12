@@ -60,7 +60,7 @@ let englishDictionary = {};
 let englishDictionarySize = 0;
 
 let wordlist = [];
-let wordlistIndex = 0;
+let wordlistIndex = 5;
 
 let timestamp = Date.now();
 
@@ -237,7 +237,7 @@ function queueSearch(query) {
     };
     request(options, function (error, response) {
       if (error) reject(error);
-      if (typeof response.body === 'undefined') reject('Missing body');
+      if (typeof response === 'undefined' || typeof response.body === 'undefined') reject('Missing body');
       const results = JSON.parse(response.body);
       if (typeof results.areas === 'undefined') reject('No areas found in response');
       // if (typeof results.areas.length === 'undefined') reject('No areas found in response');
@@ -309,6 +309,7 @@ function startWordListQueue() {
     if (err) console.log('Failed to start wordlist queue:', err);
     wordlist = data.split('\r\n');
     setInterval(function() {
+      if (downloadQueue.length) return;
       if (!wordlist.length) {
         console.log('Dictionary empty!');
         return;
@@ -322,7 +323,7 @@ function startWordListQueue() {
       queueSearch(word.toLowerCase()).then((resp) => {
         if (typeof resp !== 'undefined') console.log(resp);
       });
-    }, 5000);    
+    }, 1500);    
   });
 }
 

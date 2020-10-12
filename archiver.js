@@ -1,3 +1,9 @@
+/**
+  totalAreas: 38510,
+  totalPublicAreas: 27536,
+  totalSearchablePublicAreas: 27428,
+*/
+
 const DEBUG = false;
 
 var request = require('request');
@@ -60,7 +66,8 @@ let englishDictionary = {};
 let englishDictionarySize = 0;
 
 let wordlist = [];
-let wordlistIndex = 5;
+// let wordlistIndex = 259;
+let wordlistIndex = 0;
 
 let timestamp = Date.now();
 
@@ -305,7 +312,7 @@ function startRandomSearchQueue() {
 }
 
 function startWordListQueue() {
-  fs.readFile('wordlist.txt', 'utf8', function(err, data) {
+  fs.readFile('wordlist-twoletters.txt', 'utf8', function(err, data) {
     if (err) console.log('Failed to start wordlist queue:', err);
     wordlist = data.split('\r\n');
     setInterval(function() {

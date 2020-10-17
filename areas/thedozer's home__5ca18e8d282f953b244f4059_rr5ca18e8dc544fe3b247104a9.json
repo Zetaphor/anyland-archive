@@ -1,0 +1,1 @@
+{"thingDefinitions":[{"id":"5ca18eeef7c19165da42f39a","def":"{\"n\":\"ground\",\"v\":9,\"a\":[1],\"p\":[{\"b\":17,\"s\":[{\"p\":[0,0,0],\"r\":[0,0,0],\"s\":[3.363346,0.11062,3.201102],\"c\":[0.9019608,0.8509804,0.7215686],\"b\":[\"when starts then send one nearby to previous\"]}]}]}"}],"serveTime":4}

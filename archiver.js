@@ -5,16 +5,16 @@
 */
 
 
-var cluster = require('cluster');
-if (cluster.isMaster) {
-  cluster.fork();
+// var cluster = require('cluster');
+// if (cluster.isMaster) {
+//   cluster.fork();
 
-  cluster.on('exit', function(worker, code, signal) {
-    cluster.fork();
-  });
-}
+//   cluster.on('exit', function(worker, code, signal) {
+//     cluster.fork();
+//   });
+// }
 
-if (cluster.isWorker) {
+// if (cluster.isWorker) {
   const DEBUG = false;
 
   var request = require('request');
@@ -55,7 +55,7 @@ if (cluster.isWorker) {
   // visited, created, favorite
   const targetList = 'favorite';
   const listQueueDelay = 10 // How long in seconds before checking the random lists to queue more areas
-  const downloadDelay = 1.5; // How long in seconds between getting each area
+  const downloadDelay = 1; // How long in seconds between getting each area
   
   const headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -257,9 +257,8 @@ if (cluster.isWorker) {
         if (error) reject(error);
         if (typeof response === 'undefined' || typeof response.body === 'undefined') reject('Missing body');
         const results = JSON.parse(response.body);
-        if (typeof results.areas === 'undefined') reject('No areas found in response');
-        // if (typeof results.areas.length === 'undefined') reject('No areas found in response');
-        // console.log(typeof results.areas === 'undefined');
+        if (results['error']) reject('Missing body');
+        if (typeof results.areas === 'undefined' || typeof results.areas.length === 'undefined') reject('No areas found in response');
         let newAreas = [];
         for (let i = 0; i < results.areas.length; i++) {
           const area = results.areas[i];
@@ -318,31 +317,41 @@ if (cluster.isWorker) {
         queueSearch(word).then((resp) => {
           if (typeof resp !== 'undefined') console.log(resp);
         });
-      }, 5000);
+      }, 500);
     });
   }
   
   function startWordListQueue() {
-    fs.readFile('wordlist-threeletters.txt', 'utf8', function(err, data) {
+    const date_ob = new Date();
+    let hours = date_ob.getHours();
+    let minutes = date_ob.getMinutes();
+    let seconds = date_ob.getSeconds();    
+    console.log(`Current time: ${date_ob.getHours()}:${date_ob.getMinutes()}:${date_ob.getSeconds()}`);
+    fs.readFile('wordlist-dash-double.txt', 'utf8', function(err, data) {
       if (err) console.log('Failed to start wordlist queue:', err);
       wordlist = data.split('\r\n');
+      wordlist.sort(function (a, b) {
+        return (a).localeCompare(b);
+      });
       setInterval(function() {
         if (downloadQueue.length) return;
-        if (!wordlist.length) {
+        if (wordlistIndex >= wordlist.length) {
           console.log('Dictionary empty!');
           return;
         };
-        // const randomIndex = Math.floor(Math.random() * wordlist.length);
-        // word = wordlist[randomIndex];
-        const word = wordlist[wordlistIndex];      
-        wordlist.splice(wordlistIndex, 1);
-        wordlist.splice(wordlistIndex, 1);
+        // // const randomIndex = Math.floor(Math.random() * wordlist.length);
+        // // word = wordlist[randomIndex];
+        const word = wordlist[wordlistIndex];              
         console.log(`Searching for #${wordlistIndex}: ${word.toLowerCase()}`);
         wordlistIndex++;
+        // console.log(`Searching for #${wordlistIndex}`);        
+        // queueSearch(String(wordlistIndex)).then((resp) => {
         queueSearch(word.toLowerCase()).then((resp) => {
           if (typeof resp !== 'undefined') console.log(resp);
+        }).catch((err) => {
+          logFailedArchive(`Search word ${wordlistIndex}: ${word}`, 'Unobtained', 'Unobtained', err);          
         });
-      }, 1500);    
+      }, 300);    
     });
   }
   
@@ -366,4 +375,7 @@ if (cluster.isWorker) {
   // queueWebsiteAreaString().then((resp) => {
   //   console.log(resp);
   // })
-}
+
+
+  
+// }

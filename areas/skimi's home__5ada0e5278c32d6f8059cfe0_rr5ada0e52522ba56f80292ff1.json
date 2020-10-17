@@ -1,0 +1,1 @@
+{"thingDefinitions":[{"id":"5ada149d2768656f7f72b032","def":"{\"v\":4,\"p\":[{\"b\":139,\"e\":\"HALLO\",\"s\":[{\"p\":[0,0,0],\"r\":[-8.537737E-07,-1.590277E-15,2.134434E-07],\"s\":[0.04072148,0.04072152,0.04072149],\"c\":[1,1,1],\"b\":[\"when neared then play track hi\",\"when touched then tell nearby pressed \"]}]}]}"}],"serveTime":5}
